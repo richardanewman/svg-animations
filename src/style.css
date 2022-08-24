@@ -8,3 +8,23 @@ html {
 h1{
 	color: #000;
 }
+
+svg {
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.path {
+	stroke-dasharray: 27228.115234375;
+	stroke-dashoffset: 27228.115234375;
+	transition: 10s all;
+}
+
+svg:hover .path {
+	stroke-dashoffset: 0;
+}
