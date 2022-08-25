@@ -1,9 +1,11 @@
-function testing(){
-	console.log(`Is this thing on?`)
-};
+const pen = document.getElementById("pen");
+const penTotal = pen.getTotalLength();
+console.log('pen: ',penTotal);
 
-var path = document.getElementById("pen");
-var total = path.getTotalLength();
-console.log(total);
+const circle = document.getElementById("circle");
+const circleTotal = circle.getTotalLength();
+console.log('circle: ', circleTotal);
 
-testing();
+
+const text = document.getElementsByClassName("text");
+Object.keys(text).map((path, index) => console.log(`text path index ${index} length: ${text[path].getTotalLength()} `));

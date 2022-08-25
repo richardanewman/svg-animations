@@ -33,10 +33,42 @@ svg:hover .path {
 	fill: none;
 	stroke-width: 4px;
 	stroke: #000;
+	stroke-dasharray: 753.5776977539062;
+	stroke-dashoffset: 753.5776977539062;
+	animation: circle-outline 4s forwards;
+	opacity: 0;
 }
 
-#text {
+.text {
 	fill: none;
 	stroke-width: 1.5px;
 	stroke: #000;
+	stroke-dasharray: 200;
+	stroke-dashoffset: 200;
+	animation: circle-outline 4s forwards;
+	opacity: 0;
+}
+
+@keyframes circle-outline {
+	from {
+		stroke-dashoffset: 753.5776977539062;
+		opacity: 0;
+	}
+	to {
+		stroke-dashoffset: 0;
+		opacity: 1;
+	}
+	
+}
+
+@keyframes text-outline {
+	from {
+		stroke-dashoffset: 200;
+		opacity: 0;
+	}
+	to {
+		stroke-dashoffset: 0;
+		opacity: 1;
+	}
+	
 }
