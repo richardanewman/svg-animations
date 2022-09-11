@@ -2,6 +2,9 @@
 html {
 	box-sizing: border-box;
 }
+body {
+	background-color: #5043f2;
+}
 *, *::before, *::after {
 	box-sizing: inherit;
 }
@@ -17,6 +20,7 @@ svg {
 	left: 0;
 	right: 0;
 	margin: auto;
+	margin-bottom: 100px;
 }
 
 .path {
@@ -35,7 +39,7 @@ svg:hover .path {
 	stroke: #000;
 	stroke-dasharray: 753.5776977539062;
 	stroke-dashoffset: 753.5776977539062;
-	animation: circle-outline 4s forwards;
+	animation: 4s circle-outline 1 forwards;
 	opacity: 0;
 }
 
@@ -45,7 +49,7 @@ svg:hover .path {
 	stroke: #000;
 	stroke-dasharray: 200;
 	stroke-dashoffset: 200;
-	animation: circle-outline 4s forwards;
+	animation: 4s circle-outline 1 forwards;
 	opacity: 0;
 }
 
@@ -71,4 +75,54 @@ svg:hover .path {
 		opacity: 1;
 	}
 	
+}
+
+svg rect {
+	fill: none;
+	stroke: #fafafa;
+	stroke-width: 8px;
+	stroke-dasharray: 2000;
+	stroke-dashoffset: 2000;
+	animation: 8s minimal-outline 1 forwards;
+}
+
+svg line {
+	stroke: #fafafa;
+	stroke-dasharray: 400;
+	stroke-dashoffset: 400;
+	animation: 4s minimal-line 1 forwards;
+} 
+
+.title {
+	fill: #fafafa;
+	opacity: 0;
+	animation: 3s minimal-fade 1 forwards;
+	animation-delay: 4s;
+}
+
+@keyframes minimal-outline {
+	from {
+		stroke-dashoffset: 2000;
+	}
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes minimal-line {
+	from {
+		stroke-dashoffset: 400;
+	}
+	to {
+		stroke-dashoffset: -275;
+	}
+}
+
+@keyframes minimal-fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
